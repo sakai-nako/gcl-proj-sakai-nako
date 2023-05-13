@@ -91,6 +91,14 @@ tasks:
     cmds:
       - poetry remove {{.CLI_ARGS}}
 
+  firebase-use:
+    internal: true
+    vars: 
+      DIR: "{{default .USER_WORKING_DIR .DIR}}"
+    dir: "{{.DIR}}"
+    cmds:
+      - firebase use {{.CLI_ARGS}}
+
 # terraform/environments/dev -------------------
 
   tf-init-dev:
@@ -165,6 +173,12 @@ tasks:
     cmds:
       - rm -rf public/
       - poetry run quarto render --profile publish-site
+
+  fb-use-ss:
+    vars: {DIR: "static_site"}
+    cmds:
+      - task: firebase-use
+        vars: {DIR: "{{.DIR}}"}
 
   fbh-deploy-ss:
     dir: "static_site"

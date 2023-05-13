@@ -13,6 +13,9 @@
 - terraform-docs
     - asdfで
         - `asdf plugin add terraform-docs`
+- firebase
+    - asdfで
+        - `asdf plugin add firebase`
 - python 3.10
     - asdfで
         - `asdf plugin add python`
@@ -44,4 +47,6 @@
 
 ## Static Site
 
+- firebase project 設定
+    - `task fb-use-ss -- <Project ID>`
 - `task fbh-deploy-ss`
