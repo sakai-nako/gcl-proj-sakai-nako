@@ -1,0 +1,17 @@
+---
+title: "Blog"
+listing:
+    type: grid
+    date-format: "YYYY-MM-DD"
+    fields: [date, title, file-modified, categories, description]
+    field-display-names: 
+      title: "タイトル"
+    categories: true
+    sort:
+        - "date desc"
+        - "title asc"
+    contents: "posts"
+format:
+  html: default
+---
+

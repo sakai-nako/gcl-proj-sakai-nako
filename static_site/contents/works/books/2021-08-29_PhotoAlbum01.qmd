@@ -1,0 +1,12 @@
+---
+title: "A CERTAIN NON-BINARY ENGINEER'S PHOTO ALBUM"
+date: 2021-08-29
+image: "_images/books_test/image1.jpg"
+format:
+  html: default
+---
+
+なぜか技術書よりも先に作ってしまったフォトブック。  
+「English Edition」と表示されるが、ほとんど写真だけなのであんまり関係ないです・・・。
+
+[![](_images/books_test/image1.jpg)](https://www.amazon.co.jp/dp/B09DYT7GKM)

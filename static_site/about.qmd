@@ -1,0 +1,50 @@
+---
+title: "酒井謎子<br/>(sakai-nako)"
+image: _images/profile.jpg
+about:
+  template: trestles
+  links: 
+    - icon: twitter
+      text: twitter
+      href: https://twitter.com/nazonoobasan407
+    - icon: linkedin
+      text: linkedin(本名でやってます)
+      href: https://www.linkedin.com/in/ba4585199
+    - icon: github
+      text: github
+      href: https://github.com/sakai-nako
+    - icon: house-door
+      text: サ活
+      href: https://sauna-ikitai.com/saunners/50222
+    - icon: book
+      text: books (kindle)
+      href: https://www.amazon.co.jp/nako-Sakai/e/B09F2VSNXX
+  
+format:
+  html: default
+  # pdf: default
+# sidebar: false
+---
+
+### 名前
+
+”さかいなこ”と読みます。”なぞこ”でも別に大丈夫です😄  
+最初は「Nazono Obasan」だったのですが、姓名にしとく方がわかりやすいかと思い、現在の名前に落ち着きました。
+
+### 出身
+
+京都に生まれて、ずっと京都に住んでます。
+
+### ジェンダーについて
+
+- 身体的性 : 男性
+- 性的指向 : 女性が好き
+- 性自認 : Non-binary(Xジェンダー、MtX)
+- LGBTQ+ : Q
+
+### お仕事について
+
+10年間のコンビニバイト期間を経て、IT業界へ。1社目ではシステムエンジニアとして、要件定義〜設計〜保守までの業務を行っていました。  
+AWSを使用したシステムに関わっていたことから、クラウドに興味を持つように。  
+その後、2社目（現在）では、クラウドエンジニアとして、インフラの設計・開発・構築業務を実施中。
+その他に、技術ブログの執筆や、外部コミュニティの勉強会へも参画していたりします。

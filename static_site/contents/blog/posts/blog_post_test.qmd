@@ -1,0 +1,40 @@
+---
+title: "テスト"
+date: 2023-02-10
+date-modified: 2023-02-20
+format:
+  html: default
+---
+
+テストの記事です。  
+テストの記事・・・です。
+
+# 見出し1
+
+## 見出し2-1
+
+- テスト
+- テスト
+
+## 見出し2-2
+
+- ああ
+- ii
+
+# 見出し1-2
+
+- いい
+- うう
+
+## 見出し2-1
+
+1. かか
+1. きき
+
+
+```{python}
+import internal_module.internal as itn
+
+duration = 60
+print(f'{itn.str_time(duration)}')
+```

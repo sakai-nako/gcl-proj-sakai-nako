@@ -1,0 +1,173 @@
+version: '3'
+
+dotenv:
+  - ".task-env"
+
+tasks:
+
+  default:
+    cmds:
+      - echo You are in google-cloud-proj-sakai-nako
+
+# internal task ----------------------------------
+
+  terraform-init:
+    internal: true
+    vars: 
+      DIR: "{{default .USER_WORKING_DIR .DIR}}"
+    dir: "{{.DIR}}"
+    cmds:
+      - terraform init
+
+  terraform-plan:
+    internal: true
+    vars: 
+      DIR: "{{default .USER_WORKING_DIR .DIR}}"
+    dir: "{{.DIR}}"
+    cmds:
+      - terraform plan
+
+  terraform-apply:
+    internal: true
+    vars: 
+      DIR: "{{default .USER_WORKING_DIR .DIR}}"
+    dir: "{{.DIR}}"
+    cmds:
+      - terraform apply
+
+  terraform-destroy:
+    internal: true
+    vars: 
+      DIR: "{{default .USER_WORKING_DIR .DIR}}"
+    dir: "{{.DIR}}"
+    cmds:
+      - terraform destroy
+
+  terraform-show:
+    internal: true
+    vars: 
+      DIR: "{{default .USER_WORKING_DIR .DIR}}"
+    dir: "{{.DIR}}"
+    cmds:
+      - terraform show
+
+  terraform-validate:
+    internal: true
+    vars: 
+      DIR: "{{default .USER_WORKING_DIR .DIR}}"
+    dir: "{{.DIR}}"
+    cmds:
+      - terraform validate
+
+  terraform-docs:
+    internal: true
+    vars: 
+      DIR: "{{default .USER_WORKING_DIR .DIR}}"
+    dir: "{{.DIR}}"
+    cmds:
+      - terraform-docs .
+
+  poetry-install:
+    internal: true
+    vars: 
+      DIR: "{{default .USER_WORKING_DIR .DIR}}"
+    dir: "{{.DIR}}"
+    cmds:
+      - poetry install
+
+  poetry-add:
+    internal: true
+    vars: 
+      DIR: "{{default .USER_WORKING_DIR .DIR}}"
+    dir: "{{.DIR}}"
+    cmds:
+      - poetry add {{.CLI_ARGS}}
+
+  poetry-remove:
+    internal: true
+    vars: 
+      DIR: "{{default .USER_WORKING_DIR .DIR}}"
+    dir: "{{.DIR}}"
+    cmds:
+      - poetry remove {{.CLI_ARGS}}
+
+# terraform/environments/dev -------------------
+
+  tf-init-dev:
+    vars: {DIR: "{{.TERRAFORM_DEV_ENV_ROOT_MODULE_PATH}}"}
+    cmds:
+      - task: terraform-init
+        vars: {DIR: "{{.DIR}}"}
+
+  tf-plan-dev:
+    vars: {DIR: "{{.TERRAFORM_DEV_ENV_ROOT_MODULE_PATH}}"}
+    cmds:
+      - task: terraform-plan
+        vars: {DIR: "{{.DIR}}"}
+
+  tf-apply-dev:
+    vars: {DIR: "{{.TERRAFORM_DEV_ENV_ROOT_MODULE_PATH}}"}
+    cmds:
+      - task: terraform-apply
+        vars: {DIR: "{{.DIR}}"}
+
+  tf-destroy-dev:
+    vars: {DIR: "{{.TERRAFORM_DEV_ENV_ROOT_MODULE_PATH}}"}
+    cmds:
+      - task: terraform-destroy
+        vars: {DIR: "{{.DIR}}"}
+
+  tf-show-dev:
+    vars: {DIR: "{{.TERRAFORM_DEV_ENV_ROOT_MODULE_PATH}}"}
+    cmds:
+      - task: terraform-show
+        vars: {DIR: "{{.DIR}}"}
+
+  tf-validate-dev:
+    vars: {DIR: "{{.TERRAFORM_DEV_ENV_ROOT_MODULE_PATH}}"}
+    cmds:
+      - task: terraform-validate
+        vars: {DIR: "{{.DIR}}"}
+
+  tf-docs-dev:
+    vars: {DIR: "{{.TERRAFORM_DEV_ENV_ROOT_MODULE_PATH}}"}
+    cmds:
+      - task: terraform-docs
+        vars: {DIR: "{{.DIR}}"}
+
+# static_site -------------------
+
+  poe-ins-ss:
+    vars: {DIR: "static_site"}
+    cmds:
+      - task: poetry-install
+        vars: {DIR: "{{.DIR}}"}
+
+  poe-add-ss:
+    vars: {DIR: "static_site"}
+    cmds:
+      - task: poetry-add
+        vars: {DIR: "{{.DIR}}"}
+
+  poe-rm-ss:
+    vars: {DIR: "static_site"}
+    cmds:
+      - task: poetry-remove
+        vars: {DIR: "{{.DIR}}"}
+
+  qu-pre-ss:
+    dir: "static_site"
+    cmds:
+      - poetry run quarto preview
+
+  qu-ren-ss:
+    dir: "static_site"
+    cmds:
+      - rm -rf public/
+      - poetry run quarto render --profile publish-site
+
+  fbh-deploy-ss:
+    dir: "static_site"
+    cmds:
+      - task: qu-ren-ss
+      - firebase deploy

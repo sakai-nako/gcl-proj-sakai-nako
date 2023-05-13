@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "static-site"
+version = "0.1.0"
+description = ""
+authors = ["sakai-nako <80052740+sakai-nako@users.noreply.github.com>"]
+packages = [
+    {include = "internal_module"}
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+jupyter = "^1.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

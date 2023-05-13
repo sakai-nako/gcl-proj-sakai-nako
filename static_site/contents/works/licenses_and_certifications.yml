@@ -1,0 +1,29 @@
+- name: "原動機付自転車免許"
+  issue_date: 2013-05-10
+  expiration_date: 2023-08-01
+  comment: "ほとんど乗ってないのでゴールド免許"
+- name: "Google Cloud Certified - Professional Cloud Architect"
+  issue_date: 2022-11-22
+  expiration_date: 2024-11-22
+  certification_id: "F6EDMV"
+  certification_url: https://www.credential.net/b3eb46e7-e73a-4a3e-bf43-86552b809cd4?key=46ac11da1167d18e3807ce80edbbfdc56eb6c3450ae12d6a402a1cf3a827ed9c
+- name: "Google Cloud Certified - Professional Cloud Developer"
+  issue_date: 2023-03-20
+  expiration_date: 2025-03-20
+  certification_id: "vGzt6o"
+  certification_url: https://www.credential.net/6541eaa8-bb79-43b3-87cc-7af95cda84d6?key=d9b84b01e45d633696ae8ae757de1d295c612302b4699e646a692b369180298b
+- name: "AWS Certified Solutions Architect - Professional"
+  issue_date: 2022-09-17
+  expiration_date: 2025-09-17
+  certification_id: "ZRDHBS1CT11EQB5B"
+  certification_url: https://www.credly.com/badges/d8bdb1ea-1aff-41aa-807e-a8429014c5e8
+- name: "AWS Certified DevOps Engineer - Professional"
+  issue_date: 2021-06-12
+  expiration_date: 2024-06-12
+  certification_id: "V6KVXC2DJN141GGJ"
+  certification_url: https://www.credly.com/badges/88efc5db-92f8-4b17-8b16-d3728745aa6d
+- name: "AWS Certified Solutions Architect - Associate"
+  issue_date: 2019-04-28
+  expiration_date: 2025-09-17
+  certification_id: "PCHRYSYCBBFEQ43W"
+  comment: "デジタルバッジの移行を忘れていたためバッジの URL がないまま……"

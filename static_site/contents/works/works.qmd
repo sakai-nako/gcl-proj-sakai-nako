@@ -1,0 +1,48 @@
+---
+title: "Works"
+listing:
+  - id: slides
+    type: table
+    date-format: "YYYY/M/D"
+    fields: [date, title, event_link, structure]
+    field-display-names: 
+      title: "発表内容・タイトル"
+      event_link: "イベントページのリンク"
+      structure: "下書き"
+    sort:
+        - "date desc"
+        - "title asc"
+    contents:
+      - slides/*.qmd
+      - slides/slides_in_external_site.yml
+  - id: books
+    type: default
+    date-format: "YYYY-MM-DD"
+    fields: [date, title, image]
+    field-display-names: 
+      title: "タイトル"
+    sort:
+        - "date desc"
+        - "title asc"
+    contents: "books"
+  - id: licenses_and_certifications
+    template: _templates/licenses_and_certifications.ejs
+    contents: licenses_and_certifications.yml
+format:
+  html: default
+---
+
+## 登壇・発表スライド
+
+:::{#slides}
+:::
+
+## 本
+
+:::{#books}
+:::
+
+## 資格とか認定とか
+
+::: {#licenses_and_certifications}
+:::

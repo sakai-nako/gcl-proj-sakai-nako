@@ -1,0 +1,50 @@
+project:
+  title: "Nako's Knowledge Base"
+  type: website
+  output-dir: public
+  preview: 
+    port: 6080
+    browser: false
+
+bibliography: _bibliography/sample.bib
+csl: _csl/japanese-journal-of-radiology.csl
+
+website:
+  google-analytics: "G-57G9E1MVET"
+  search:
+    location: navbar
+    type: overlay
+  navbar:
+    background: primary
+    left: 
+      - text: "Home(工事中)"
+        file: index.qmd
+      - text: "About me"
+        file: about.qmd
+      - text: Blog(工事中)
+        file: contents/blog/blog.qmd
+      - text: Works
+        file: contents/works/works.qmd
+    right: 
+      - icon: twitter
+        href: https://twitter.com/nazonoobasan407
+      - icon: linkedin
+        href: https://www.linkedin.com/in/ba4585199
+
+format:
+  html:
+    lang: ja
+    toc: true
+    code-fold: true
+    code-overflow: wrap
+    link-external-newwindow: true
+    theme:
+      - zephyr
+      - _custom_scss/expand_toc.scss
+
+execute: 
+  echo: false
+  freeze: auto
+
+profile: 
+  default: develop
