@@ -1,5 +1,7 @@
 # Nako’s Knowledge Base 関連リポジトリ
 
+URL -> https://gcl.hack-pleasantness.com
+
 以下は個人用メモ。
 
 # Require
@@ -46,6 +48,8 @@
 - `task tf-apply-dev`
 
 ## Static Site
+
+GitHub Actions で自動化したい。
 
 - firebase project 設定
     - `task fb-use-ss -- <Project ID>`
