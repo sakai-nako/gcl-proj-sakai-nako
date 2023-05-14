@@ -669,3 +669,51 @@ print(f'**ここまでで {itn.str_time(duration)}**')
 
 <!-- --------------------------------------------------------------------- -->
 <!-- --------------------------------------------------------------------- -->
+
+# Appendix
+
+::: {.notes}
+
+【ToDo】ノート
+
+```{python}
+#| output: asis
+
+# 時間設定
+duration = duration + 10
+
+print(f'**ここまでで {itn.str_time(duration)}**')
+```
+:::
+
+<!-- --------------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------------- -->
+
+## このスライドについて {.smaller}
+
+- 何で作ってるの？
+  - [Quarto](https://quarto.org/) というドキュメント生成システムを使ってます
+    - スライドは Reveal.js を使って作成されます
+- ソースコードはあるの？
+  - [GitHub](https://github.com/sakai-nako/gcl-proj-sakai-nako) にあります
+    - `static_site/contents/works/slides/` 配下にあります
+- インフラ構成は？
+  - Google Domains, Cloud DNS, Firebase Hosting を使ってます
+- 静的Webサイト -> [Nako's Knowledge Base](https://gcl.hack-pleasantness.com/)
+
+::: {.notes}
+
+【ToDo】ノート
+
+```{python}
+#| output: asis
+
+# 時間設定
+duration = duration + 10
+
+print(f'**ここまでで {itn.str_time(duration)}**')
+```
+:::
+
+<!-- --------------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------------- -->

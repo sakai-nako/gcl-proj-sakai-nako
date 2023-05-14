@@ -1,0 +1,31 @@
+```{=html}
+
+<% for (const item of items) { %>
+
+<% if(item.certification_url){ %>
+<a href="<%- item.certification_url %>" style="font-weight: bold;"><%= item.name %></a><br />
+<% }else{ %>
+<span style="font-weight: bold;"><%= item.name %></span><br />
+<% } %>
+
+<%= `発行日 : ${item.issue_date}` %>
+<br />
+
+<%= `有効期限 : ${item.expiration_date}` %>
+<br />
+
+<% if(item.certification_id){ %>
+<%= `認証 ID : ${item.certification_id}` %>
+<br />
+<% } %>
+
+<% if(item.comment){ %>
+<%= `(${item.comment})` %>
+<br />
+<% } %>
+
+<br />
+
+<% } %>
+
+```

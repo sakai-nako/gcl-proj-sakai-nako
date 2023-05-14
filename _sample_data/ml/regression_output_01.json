@@ -1,0 +1,11 @@
+{
+  "predictions": [
+    {
+      "score": "データXYY"
+    }
+  ],
+  "deployedModelId": "AIモデルのID",
+  "model": "AIモデルの名前",
+  "modelDisplayName": "AIモデルの名前",
+  "modelVersionId": "AIバージョンのID"
+}
