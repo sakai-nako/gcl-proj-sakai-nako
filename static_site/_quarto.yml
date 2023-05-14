@@ -25,8 +25,8 @@ website:
         file: contents/blog/blog.qmd
       - text: Works
         file: contents/works/works.qmd
-      - text: "Snippets"
-        href: contents/snippets/index.qmd
+      - text: "Fragments"
+        href: contents/fragments/fragments.qmd
     right: 
       - icon: twitter
         href: https://twitter.com/nazonoobasan407
@@ -35,13 +35,13 @@ website:
       - icon: github
         href: https://github.com/sakai-nako
   sidebar:
-    - title: "Snippets"
+    - id: fragments
       style: docked
       background: light
       contents:
-        - text: "Snippets"
-          href: contents/snippets/index.qmd
-        - auto: contents/snippets/snippets/*.qmd
+        - text: "Fragments"
+          href: contents/fragments/fragments.qmd
+        - auto: "contents/fragments/qmd/*.qmd"
 
 format:
   html:

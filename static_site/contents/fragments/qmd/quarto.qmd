@@ -3,7 +3,6 @@ title: "Quarto"
 format:
   html:
     code-fold: false
-
 ---
 
 # スライドテンプレ

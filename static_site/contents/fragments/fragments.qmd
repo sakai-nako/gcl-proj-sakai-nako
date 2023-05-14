@@ -1,0 +1,9 @@
+---
+title: "Fragments"
+page-layout: full
+format:
+  html:
+    code-fold: false
+---
+
+コピペ用コードとか。

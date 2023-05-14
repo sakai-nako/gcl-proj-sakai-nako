@@ -1,6 +1,0 @@
----
-title: "Snippets"
-page-layout: full
----
-
-スニペットたち。
