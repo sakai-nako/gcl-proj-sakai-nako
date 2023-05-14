@@ -1,5 +1,8 @@
 ---
 title: "Works"
+toc-title: "Works"
+page-layout: full
+sidebar: false
 listing:
   - id: slides
     type: table

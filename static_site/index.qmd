@@ -1,5 +1,6 @@
 ---
 title: "トップページ"
+page-layout: full
 format:
   html: default
   # pdf: default

@@ -1,5 +1,7 @@
 ---
 title: "Blog"
+page-layout: full
+sidebar: false
 listing:
     type: grid
     date-format: "YYYY-MM-DD"

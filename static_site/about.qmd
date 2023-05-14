@@ -1,5 +1,7 @@
 ---
 title: "酒井謎子<br/>(sakai-nako)"
+page-layout: full
+sidebar: false
 image: _images/profile.jpg
 about:
   template: trestles
@@ -23,7 +25,6 @@ about:
 format:
   html: default
   # pdf: default
-# sidebar: false
 ---
 
 ### 名前

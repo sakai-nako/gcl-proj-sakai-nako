@@ -1,0 +1,110 @@
+---
+title: "Quarto"
+format:
+  html:
+    code-fold: false
+
+---
+
+# スライドテンプレ
+
+## yaml ヘッダ
+
+```yaml
+---
+title: "タイトル"
+date: 2023-03-19 # 日付
+author: "酒井 謎子"
+date-format: "YYYY年 M月 D日"
+event_link: ""
+structure: "[下書き](./slides/structures/)"
+event_name: ""
+draft: true # 公開状態
+format:
+  revealjs:
+    theme: simple
+    slide-level: 2
+    smaller: true
+    template-partials:
+      - _custom_templates/title-slide.html
+    # logo:
+    # footer: "フッターテキスト<br/>改行もできる"
+    menu: false
+    slide-number: c/t
+    show-slide-number: speaker
+    # show-slide-number: print
+    # show-notes: true
+    # show-notes: separate-page
+    # pdf-separate-fragments: true
+    preview-links: false
+    # slide-tone: true
+    progress: false
+    history: false
+    hash-type: number
+    # chalkboard:
+    #   buttons: false
+    #   src: <file>
+    # transition: convex
+    # transition-speed: default
+    # navigation-mode: vertical
+    # controls-layout: bottom-right
+    # controls-back-arrows: visible
+    # controls-tutorial: true
+    css: _custom_scss/style.scss
+#   pptx:
+#     slide-level: 2
+    
+---
+```
+
+## 冒頭
+
+```{{python}}
+import internal_module.internal as itn
+
+duration = 0
+```
+
+## 見出しスライド
+
+````markdown
+# 見出し
+
+::: {.notes}
+
+
+```{{python}}
+#| output: asis
+
+# 時間設定
+duration = duration + 10
+
+print(f'**ここまでで {itn.str_time(duration)}**')
+```
+:::
+
+<!-- --------------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------------- -->
+````
+
+## 内容スライド
+
+````markdown
+## タイトル
+
+::: {.notes}
+
+
+```{{python}}
+#| output: asis
+
+# 時間設定
+duration = duration + 10
+
+print(f'**ここまでで {itn.str_time(duration)}**')
+```
+:::
+
+<!-- --------------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------------- -->
+````
