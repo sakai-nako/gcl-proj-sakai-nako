@@ -20,7 +20,7 @@ format:
     # show-slide-number: print
     # show-notes: true
     # show-notes: separate-page
-    # pdf-separate-fragments: true
+    pdf-separate-fragments: true
     preview-links: false
     # slide-tone: true
     progress: false
