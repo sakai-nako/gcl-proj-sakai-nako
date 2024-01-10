@@ -1,6 +1,6 @@
 # Nako’s Knowledge Base 関連リポジトリ
 
-URL -> https://gcl.hack-pleasantness.com
+URL: https://gcl.hack-pleasantness.com
 
 以下は個人用メモ。
 
@@ -12,13 +12,13 @@ URL -> https://gcl.hack-pleasantness.com
 
 # Setup
 
-- Make `.env` file
+## Make `.env` file
 
 ```sh
 cp .env.example .env
 ```
 
-- Install tools/runtimes
+## Install tools/runtimes
 
 ```sh
 mise run setup <Ubuntu or MacOS>
