@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# mise:description "Push to git subtree repository"
+
+if [ $# -ne 1 ]; then
+  echo "Usage: $0 <subtree branch name>"
+  exit 1
+fi
+
+git subtree push --prefix=code/gcl-proj-sakai-nako nako-knowledge-base $1
