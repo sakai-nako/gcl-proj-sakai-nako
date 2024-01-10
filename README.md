@@ -4,10 +4,22 @@ URL -> https://gcl.hack-pleasantness.com
 
 以下は個人用メモ。
 
-# Require
+# Prerequisites
 
-Under construction.
+- bash
+- wget
+- [mise](https://mise.jdx.dev/)
 
 # Setup
 
-Under construction.
+- Make `.env` file
+
+```sh
+cp .env.example .env
+```
+
+- Install tools/runtimes
+
+```sh
+mise run setup <Ubuntu or MacOS>
+```
