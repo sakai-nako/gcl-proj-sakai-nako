@@ -6,22 +6,35 @@ if [ $# -ne 1 ]; then
   exit 1
 fi
 
+
+# Install tools/runtimes from .mise.toml
 mise install -y
 
+
 if [ $1 = "Ubuntu" ]; then
+  # Install Quarto
     quartoFile=$(echo ${QUARTO_DEB_FILE_URL} | sed -e "s/.*\///g")
 
     wget ${QUARTO_DEB_FILE_URL}
     sudo dpkg -i ${quartoFile}
     rm ${quartoFile}
+
+  # Install Mise completion
+  mise completion bash | sudo tee /usr/share/bash-completion/completions/mise
 fi
 
+
 if [ $1 = "MacOS" ]; then
+  # Install Quarto
     quartoFile=$(echo ${QUARTO_PKG_FILE_URL} | sed -e "s/.*\///g")
     wget ${QUARTO_DEB_FILE_URL}
     installer -pkg ${quartoFile} -target /
     rm ${quartoFile}
+
+  # Install Mise completion
+    mise completion zsh > /usr/local/share/zsh/site-functions/_mise
 fi
+
 
 poetry config virtualenvs.in-project true --local
 poetry install --no-root
