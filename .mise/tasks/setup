@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+# mise:description "Setup development environment"
+
+if [ $# -ne 1 ]; then
+  echo "Usage: $0 <Ubuntu or MacOS>"
+  exit 1
+fi
+
+mise install -y
+
+if [ $1 = "Ubuntu" ]; then
+    quartoFile=$(echo ${QUARTO_DEB_FILE_URL} | sed -e "s/.*\///g")
+
+    wget ${QUARTO_DEB_FILE_URL}
+    sudo dpkg -i ${quartoFile}
+    rm ${quartoFile}
+fi
+
+if [ $1 = "MacOS" ]; then
+    quartoFile=$(echo ${QUARTO_PKG_FILE_URL} | sed -e "s/.*\///g")
+    wget ${QUARTO_DEB_FILE_URL}
+    installer -pkg ${quartoFile} -target /
+    rm ${quartoFile}
+fi
+
+poetry config virtualenvs.in-project true --local
+poetry install --no-root
