@@ -1,5 +1,0 @@
-{
-    "files.exclude": {
-        "static_site/": true
-    }
-}
