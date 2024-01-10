@@ -1,0 +1,7 @@
+[env]
+mise.file = ".env"
+
+[tools]
+# Python
+poetry = '1.7.1'
+python = '3.12.1'
