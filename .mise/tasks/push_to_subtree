@@ -8,4 +8,4 @@ fi
 
 cd $(cd $(dirname $0); pwd)/../../../../
 
-git subtree push --prefix=code/gcl-proj-sakai-nako nako-knowledge-base $1
+git subtree push --prefix=App/gcl-proj-sakai-nako nako-knowledge-base $1
